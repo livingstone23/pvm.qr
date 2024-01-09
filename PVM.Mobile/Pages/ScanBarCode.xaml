@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PVM.Mobile.Pages.ScanQR"
+             x:Class="PVM.Mobile.Pages.ScanBarCode"
              xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui"
-             Title="ScanQR">
+             Title="ScanBarCode">
     <VerticalStackLayout
         Spacing="25"
         Padding="30,0"
         VerticalOptions="Center"
-        
         >
+
         <Label 
-            Text="Muestre el Código QR"
+            Text="Muestre el Código Barra"
             FontSize="17" 
             FontAttributes="Bold" 
             Margin="0,0,0,5"
@@ -22,7 +22,7 @@
             Orientation="Vertical"
             HorizontalOptions="Center"
             Margin="0,0,0,30"
-            >
+        >
             <Button
                 x:Name="btnRegrear"
                 Text="Regresar"
@@ -31,15 +31,17 @@
 
         </StackLayout>
 
-        
-       
-
         <zxing:CameraBarcodeReaderView
             WidthRequest="300"
             HeightRequest="300"
             x:Name="ImagenDetector"
             BarcodesDetected="ImagenDetector_OnBarcodesDetected"
-            ></zxing:CameraBarcodeReaderView>
+        >
+
+        </zxing:CameraBarcodeReaderView>
+
+
+
 
     </VerticalStackLayout>
 </ContentPage>

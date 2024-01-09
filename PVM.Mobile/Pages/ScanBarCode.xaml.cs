@@ -2,14 +2,14 @@ using ZXing.Net.Maui;
 
 namespace PVM.Mobile.Pages;
 
-public partial class ScanQR : ContentPage
+public partial class ScanBarCode : ContentPage
 {
-	public ScanQR()
+	public ScanBarCode()
 	{
 		InitializeComponent();
         ImagenDetector.Options = new ZXing.Net.Maui.BarcodeReaderOptions
         {
-            Formats = ZXing.Net.Maui.BarcodeFormat.QrCode
+            Formats = ZXing.Net.Maui.BarcodeFormat.Code128
         };
     }
 

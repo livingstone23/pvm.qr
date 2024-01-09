@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PVM.Mobile", "PVM.Mobile\PVM.Mobile.csproj", "{A62CFF20-19E4-4E0B-B304-B7168EFE47F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PVM.Mobile", "PVM.Mobile\PVM.Mobile.csproj", "{A62CFF20-19E4-4E0B-B304-B7168EFE47F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{8E90A58A-70F1-4FA3-B3D2-54E42447C232}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{6B5401DC-C7B1-4F6A-A481-86AA4F9DF8FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PVM.ApiMobile", "PVM.ApiMobile\PVM.ApiMobile.csproj", "{243D8B4E-A80D-4CDD-AA5E-92CA604B0B79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +23,17 @@ Global
 		{A62CFF20-19E4-4E0B-B304-B7168EFE47F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A62CFF20-19E4-4E0B-B304-B7168EFE47F4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A62CFF20-19E4-4E0B-B304-B7168EFE47F4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{243D8B4E-A80D-4CDD-AA5E-92CA604B0B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243D8B4E-A80D-4CDD-AA5E-92CA604B0B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243D8B4E-A80D-4CDD-AA5E-92CA604B0B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243D8B4E-A80D-4CDD-AA5E-92CA604B0B79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A62CFF20-19E4-4E0B-B304-B7168EFE47F4} = {8E90A58A-70F1-4FA3-B3D2-54E42447C232}
+		{243D8B4E-A80D-4CDD-AA5E-92CA604B0B79} = {6B5401DC-C7B1-4F6A-A481-86AA4F9DF8FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {75F4BC09-A339-4495-8F88-C38796733E2E}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PVM.Mobile.Pages.MenuPage"
+             Title="MenuPage">
+    <VerticalStackLayout>
+       <ListView x:Name="lstMenu" 
+                 ItemTapped="LstMenu_OnItemTapped" 
+                 SelectedItem="{Binding oMenuCls}"
+                 ItemsSource="{Binding ListMenu}">
+
+
+           <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding NameOption}" ImageSource="{Binding NameIcon}"/>
+                </DataTemplate>
+           </ListView.ItemTemplate>
+       </ListView>
+    </VerticalStackLayout>
+</ContentPage>

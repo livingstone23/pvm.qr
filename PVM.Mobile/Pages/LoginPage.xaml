@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PVM.Mobile.Pages.LoginPage"
+             Title="LoginPage">
+    <VerticalStackLayout 
+        Margin="5"
+        VerticalOptions="CenterAndExpand"
+        
+        >
+        <Label 
+            Text="Bienvenido"
+            FontSize="25"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+       
+
+        <Label 
+            Text="Ingrese Usuario"
+
+            />
+        <Entry Text="{Binding nameuser}"/>
+
+        <Label 
+            Text="Ingrese Password"
+            
+            />
+
+        <Entry IsPassword="True"
+               Text="{Binding password}"/>
+
+        <Button Text="Ingresar" x:Name="btnIngresar" Clicked="BtnIngresar_OnClicked"
+                ></Button>
+
+    </VerticalStackLayout>
+</ContentPage>

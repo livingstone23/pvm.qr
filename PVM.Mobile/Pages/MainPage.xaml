@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:PVM.Mobile.Pages"
+             x:Class="PVM.Mobile.Pages.MainPage"
+             Title="MainPage">
+    
+    <FlyoutPage.Flyout>
+        <pages:MenuPage>
+
+        </pages:MenuPage>
+        
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <NavigationPage x:Name="Navigate">
+            <x:Arguments>
+                <pages:InitialPage></pages:InitialPage>
+            </x:Arguments>
+        </NavigationPage>
+        
+    </FlyoutPage.Detail>
+
+
+</FlyoutPage>
