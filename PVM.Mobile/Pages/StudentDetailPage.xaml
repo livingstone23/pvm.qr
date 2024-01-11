@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PVM.Mobile.Pages.StudentDetailPage"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui"
+             Title="Detalle Alumno"
+             >
+   <VerticalStackLayout>
+
+       <Label 
+            Text="Información Studiante"
+            VerticalOptions="Center"
+			HorizontalOptions="Center"
+            />
+
+       <Label
+           x:Name="lblFullName"
+           Text="{Binding obj.FullName}"
+           FontSize="18"
+           FontAttributes="Bold"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           Margin="0,10"
+       />
+
+       <zxing:BarcodeGeneratorView
+           WidthRequest="150"
+           HeightRequest="150"
+           Format="QrCode"
+           Value="{Binding obj.IdStudent}"
+           Margin="5"
+       />
+
+       <HorizontalStackLayout
+           HorizontalOptions="Center"
+
+           >
+		   <Button
+               Margin="0,10"
+               x:Name="btnSendEmail"
+               Text="Enviar correo"
+               Clicked="BtnSendEmail_OnClicked"
+
+           />
+
+       </HorizontalStackLayout>
+       
+
+
+   </VerticalStackLayout>
+</ContentPage>

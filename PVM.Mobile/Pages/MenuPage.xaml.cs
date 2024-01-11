@@ -78,12 +78,16 @@ public partial class MenuPage : ContentPage
 
         if (oMenuCls.IdMenu == 2)
         {
-            App.Current.MainPage = new GenerateQR();
+            //App.Current.MainPage = new GenerateQR();
+            App.Navigate.PushAsync(new GenerateQR());
+            App.Menu.IsPresented = false;
         }
 
         if (oMenuCls.IdMenu == 3)
         {
-            App.Current.MainPage = new ScanBarCode();
+            //App.Current.MainPage = new ScanBarCode();
+            App.Navigate.PushAsync(new ScanBarCode());
+            App.Menu.IsPresented = false;
         }
 
         if (oMenuCls.IdMenu == 4)

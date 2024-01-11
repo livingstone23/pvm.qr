@@ -71,6 +71,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Pages\StudentDetailPage.xaml.cs">
+	    <DependentUpon>StudentDetailPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Pages\StudentsPage.xaml.cs">
 	    <DependentUpon>StudentsPage.xaml</DependentUpon>
 	  </Compile>
@@ -102,6 +105,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ScanQR.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\StudentDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\StudentsPage.xaml">

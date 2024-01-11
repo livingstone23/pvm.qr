@@ -17,8 +17,10 @@
             </StackLayout>
 
             <ListView
-                x:Name="lstStudent"
+                x:Name="listStudent"
                 ItemsSource="{Binding oStudentModel.list}"
+                SelectedItem="{Binding oStudentCLS}"
+                ItemTapped="ListStudent_OnItemTapped"
             >
                 <ListView.ItemTemplate>
                     <DataTemplate>

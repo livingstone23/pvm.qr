@@ -8,6 +8,8 @@ public partial class StudentsPage : ContentPage
 
 	public StudenModel oStudentModel { get; set; }
 
+    public StudentCLS oStudentCLS { get; set; }
+
 	public StudentsPage()
 	{
         oStudentModel = new StudenModel();
@@ -26,5 +28,11 @@ public partial class StudentsPage : ContentPage
     private void BtnRegresar_OnClicked(object? sender, EventArgs e)
     {
         App.Current.MainPage = new MainPage();
+    }
+
+    private void ListStudent_OnItemTapped(object? sender, ItemTappedEventArgs e)
+    {
+        //DisplayAlert("Datos", oStudentCLS.FullName,"Cancelar");
+        App.Navigate.PushAsync(new StudentDetailPage(oStudentCLS));
     }
 }
