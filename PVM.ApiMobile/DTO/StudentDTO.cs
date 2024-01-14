@@ -1,6 +1,6 @@
 ﻿namespace PVM.ApiMobile.DTO;
 
-public class StudentCLS
+public class StudentDTO
 {
 
     public int IdStudent { get; set; }

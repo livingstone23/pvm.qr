@@ -1,3 +1,6 @@
+using PVM.Mobile.Generic;
+using PVM.Mobile.Models;
+
 namespace PVM.Mobile.Pages;
 
 public partial class LoginPage : ContentPage
@@ -12,18 +15,28 @@ public partial class LoginPage : ContentPage
         BindingContext = this;
     }
 
-    private void BtnIngresar_OnClicked(object? sender, EventArgs e)
+    private async void BtnIngresar_OnClicked(object? sender, EventArgs e)
     {
-        
-        if (nameuser == "lcano" && password=="1234")
+        UsuarioCLS oUsuarioCls = await Http.Get<UsuarioCLS>("http://rodolfocanobravo-002-site1.atempurl.com/api/Login/"+ nameuser+"/"+password);
+
+        if (oUsuarioCls.IdUser == 0)
         {
-            App.Current.MainPage = new MainPage();
-            Preferences.Set("iduser",1);
+            await DisplayAlert("Error", "Usuario o contraseña incorrecta", "Cancelar");
         }
         else
         {
-            DisplayAlert("Error", "Usuario o contraseña incorrecta", "Cancelar");
+            App.Current.MainPage = new MainPage();
+            Preferences.Set("iduser", oUsuarioCls.IdUser);
         }
+        //if (nameuser == "lcano" && password=="1234")
+        //{
+        //    App.Current.MainPage = new MainPage();
+        //    Preferences.Set("iduser",1);
+        //}
+        //else
+        //{
+        //    DisplayAlert("Error", "Usuario o contraseña incorrecta", "Cancelar");
+        //}
 
     }
 }

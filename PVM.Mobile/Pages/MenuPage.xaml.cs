@@ -53,7 +53,14 @@ public partial class MenuPage : ContentPage
         {
             IdMenu = 6,
             NameOption = "Asistencia",
-            NameIcon = "ic_camera"
+            NameIcon = "ic_alumno"
+        });
+
+        ListMenu.Add(new MenuCLS
+        {
+            IdMenu = 7,
+            NameOption = "Ver Marcaciones",
+            NameIcon = "ic_asistencia"
         });
 
         ListMenu.Add(new MenuCLS
@@ -105,6 +112,12 @@ public partial class MenuPage : ContentPage
         if (oMenuCls.IdMenu == 6)
         {
             App.Current.MainPage = new AssistencePage();
+        }
+
+        if (oMenuCls.IdMenu == 7)
+        {
+            App.Navigate.PushAsync(new WatchMarkPage());
+            App.Menu.IsPresented = false;
         }
 
         if (oMenuCls.IdMenu == 1000)

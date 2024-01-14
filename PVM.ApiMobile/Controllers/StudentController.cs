@@ -11,15 +11,15 @@ namespace PVM.ApiMobile.Controllers
     {
 
         [HttpGet]
-        public List<StudentCLS> GetStudents()
+        public List<StudentDTO> GetStudents()
         {
-            List<StudentCLS> StudentList = new List<StudentCLS>();
+            List<StudentDTO> StudentList = new List<StudentDTO>();
 
             using (DbMovilContext bd = new DbMovilContext())
             {
                 StudentList = (from student in bd.Personas
                         where student.Bhabilitado == 1
-                        select new StudentCLS
+                        select new StudentDTO
                         {
                             IdStudent = student.Idpersona,
                             FullName =$"{student.Nombre} {student.Appaterno} {student.Apmaterno}",

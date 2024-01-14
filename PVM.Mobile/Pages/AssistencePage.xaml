@@ -2,11 +2,46 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PVM.Mobile.Pages.AssistencePage"
-             Title="AssistencePage">
-    <VerticalStackLayout>
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.Maui"
+             Title="Asistencia">
+    
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center"
+    
+    >
         <Label 
-            Text="Asistencia"
+            Text="Muestre el Código QR"
+            FontSize="17" 
+            FontAttributes="Bold" 
+            Margin="0,0,0,5"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <StackLayout 
+            Orientation="Vertical"
+            HorizontalOptions="Center"
+            Margin="0,0,0,30"
+        >
+            <Button
+                x:Name="btnRegrear"
+                Text="Regresar"
+                Clicked="BtnRegrear_OnClicked"
+            />
+
+        </StackLayout>
+
+
+
+
+        <zxing:CameraBarcodeReaderView
+            WidthRequest="300"
+            HeightRequest="300"
+            x:Name="ImagenDetector"
+            BarcodesDetected="ImagenDetector_OnBarcodesDetected"
+        ></zxing:CameraBarcodeReaderView>
+
     </VerticalStackLayout>
+
 </ContentPage>

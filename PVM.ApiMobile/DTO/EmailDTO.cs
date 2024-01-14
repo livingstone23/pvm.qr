@@ -1,6 +1,6 @@
 ﻿namespace PVM.ApiMobile.DTO
 {
-    public class EmailCLS
+    public class EmailDTO
     {
 
         public List<string> correosAEnviar { get; set; }

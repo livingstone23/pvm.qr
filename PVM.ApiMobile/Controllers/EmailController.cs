@@ -12,9 +12,9 @@ namespace PVM.ApiMobile.Controllers
 
 
         [HttpPost]
-        public string sendEmail([FromBody] EmailCLS oEmailCls)
+        public string sendEmail([FromBody] EmailDTO oEmailDto)
         {
-            return Email.EnviarCorreo(oEmailCls.correosAEnviar, oEmailCls.asunto, oEmailCls.contenido, oEmailCls.nombresArchivos, oEmailCls.listabyte);
+            return Email.EnviarCorreo(oEmailDto.correosAEnviar, oEmailDto.asunto, oEmailDto.contenido, oEmailDto.nombresArchivos, oEmailDto.listabyte);
         }
 
     }
